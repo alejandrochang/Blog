@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchPosts, fetchUser } from "../actions";
+import UserHeader from "./UserHeader";
 
 class PostList extends Component {
   componentDidMount() {
@@ -8,7 +9,7 @@ class PostList extends Component {
   }
 
   renderList() {
-    return this.props.posts.map((post) => {
+    return this.props.posts.map(post => {
       return (
         <div className="item" key={post.id}>
           <i className="large middle aligned icon user" />
@@ -22,14 +23,19 @@ class PostList extends Component {
       );
     });
   }
-  
+
   render() {
-    return <div className="ui relaxed divided list">{this.renderList()}</div>
+    return (
+      <div className="ui relaxed divided list">
+        {this.renderList()}
+        <UserHeader />
+      </div>
+    );
   }
 }
 
-const mapStateToProps = (state) => {
-  return { posts: state.posts }
+const mapStateToProps = state => {
+  return { posts: state.posts };
 };
 
 export default connect(
