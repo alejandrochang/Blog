@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 class UserHeader extends Component {
   componentDidMount() {
-    // this.props.fetchUser();
+    this.props.fetchUser(this.props.userId);
   }
   render() {
     return(
@@ -13,4 +13,4 @@ class UserHeader extends Component {
   }
 }
 
-export default UserHeader;
+export default connect()(UserHeader);
