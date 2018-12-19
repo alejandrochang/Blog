@@ -6,5 +6,3 @@ export default (state = [], action) => {
       return state;
   }
 };
-
-// never reach

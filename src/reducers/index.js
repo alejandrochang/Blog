@@ -6,7 +6,11 @@ export default combineReducers({
 }); 
 
 
-// export default combineReducers({
-//   replaceMe: () => "hi there"
-// }); 
-// dummy reducer to make the application work
+/*  Initialization example:
+
+export default combineReducers({
+  replaceMe: () => "hi there"
+});
+dummy reducer to make the application work
+
+*/
