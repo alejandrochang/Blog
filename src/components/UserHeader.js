@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-// import { fetchUser } from './actions';
+import { fetchUser } from '../actions';
 
 class UserHeader extends Component {
   componentDidMount() {
@@ -13,4 +13,4 @@ class UserHeader extends Component {
   }
 }
 
-export default connect()(UserHeader);
+export default connect(null, { fetchUser })(UserHeader);
